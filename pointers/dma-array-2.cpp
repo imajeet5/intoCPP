@@ -14,7 +14,7 @@ void printArrays(int array_pointer[], int arr[]) {
 void updateArray(int array_pointer[]) {
     for (int i = 0; i < 5; i++)
     {
-        array_pointer[i] *= i;
+        array_pointer[i] *= 10;
     }
     cout <<  endl;
 }
@@ -22,7 +22,7 @@ void updateArray(int array_pointer[]) {
 int main(int argc, char const *argv[])
 {
     int *array_pointer{};
-    int arr[]{ 1, 2, 3, 4, 5 };
+    int arr[]{ 10, 20, 30, 40, 50 };
 
     // as the first element of the array is the location in the memory
     array_pointer = arr;
@@ -30,6 +30,9 @@ int main(int argc, char const *argv[])
     cout << "Address array_pointer pointing to: " << array_pointer << endl;
     cout << "Address array_pointer[0] pointing to: " << &array_pointer[0] << endl;
     cout << "Address of arr to: " << arr << endl;
+    cout << "Value of *arr to: " << *arr << endl;
+    cout << "Value of *array_pointer to: " << *array_pointer << endl;
+    cout << "Value of *(array_pointer + 1) to: " << *(array_pointer + 1) << endl;
     cout <<  endl;
     printArrays(array_pointer, arr);
 
